@@ -1,8 +1,8 @@
 :root {
-  --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-sans: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --color-black: #202123;
-  --color-dark-gray: #32373e;
+  --color-dark-gray: #4c4a4f;
   --color-gray: #697a90;
   --color-light-gray: #b4bcc7;
   --color-very-light-gray: #e7ebed;
