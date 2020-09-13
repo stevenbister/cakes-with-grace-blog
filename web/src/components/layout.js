@@ -4,17 +4,15 @@ import Header from './header'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
+const Layout = ({children, siteTitle}) => (
   <>
-    <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
-    <div className={styles.content}>{children}</div>
+    <Header siteTitle={siteTitle} />
+    <main className={styles.content}>{children}</main>
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
         <div className={styles.siteInfo}>
-          &copy; {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a>{' '}
-          &amp;
-          {` `}
-          <a href='https://www.gatsbyjs.org'>Gatsby</a>
+          <p>&copy; {new Date().getFullYear()}, Cakes with Grace</p>
+          <p>Made with ❤️ by <a href='https://stevenbister.com'>Steven Bister</a></p>
         </div>
       </div>
     </footer>
