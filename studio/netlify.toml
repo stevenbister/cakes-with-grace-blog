@@ -2,3 +2,8 @@
   from = "/*"
   to = "/"
   status = 200
+
+[[redirects]]
+  from = "https://cakes-with-grace-blog-studio.netlify.app/"
+  to = "https://dashboard.cakeswithgrace.com/"
+  status = 301
