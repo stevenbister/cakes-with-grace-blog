@@ -3,7 +3,8 @@ import MdSettings from 'react-icons/lib/md/settings'
 import {
   MdPerson,
   MdDescription,
-  MdLocalOffer
+  MdLocalOffer,
+  MdImage
 } from 'react-icons/lib/md'
 import IframePreview from '../previews/IframePreview'
 
@@ -21,14 +22,14 @@ export const getDefaultDocumentNode = props => {
    * you can set up that logic in here too.
    * https://www.sanity.io/docs/structure-builder-reference#getdefaultdocumentnode-97e44ce262c9
    */
-  const { schemaType } = props
+  const {schemaType} = props
   if (schemaType == 'post') {
     return S.document().views([
       S.view.form(),
       S.view
         .component(IframePreview)
         .title('Web preview')
-        .options({ previewURL })
+        .options({previewURL})
     ])
   }
   return S.document().views([S.view.form()])
@@ -72,12 +73,17 @@ export default () =>
         .icon(MdLocalOffer)
         .schemaType('category')
         .child(S.documentTypeList('category').title('Categories')),
+      S.listItem()
+        .title('Galleries')
+        .icon(MdImage)
+        .schemaType('gallery')
+        .child(S.documentTypeList('gallery').title('Galleries')),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         listItem =>
-          !['category', 'author', 'post', 'siteSettings'].includes(
+          !['category', 'author', 'post', 'siteSettings', 'gallery'].includes(
             listItem.getId()
           )
       )
