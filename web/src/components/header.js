@@ -19,6 +19,9 @@ const Header = ({siteTitle}) => (
           <li>
             <Link to='/archive/'>Archive</Link>
           </li>
+          <li>
+            <Link to='/gallery/'>Gallery</Link>
+          </li>
         </ul>
       </nav>
     </div>
