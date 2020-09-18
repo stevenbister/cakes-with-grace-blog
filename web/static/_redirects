@@ -1,0 +1,2 @@
+# Redirect the netlify domain back to the main
+https://cakes-with-grace-blog.netlify.app/* https://www.cakeswithgrace.com/:splat 301!
