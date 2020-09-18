@@ -1,0 +1,19 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  margin: 2rem 1rem;
+
+  @media (--media-min-small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (--media-min-medium) {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 4rem 2rem;
+  }
+}
